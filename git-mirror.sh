@@ -26,7 +26,7 @@ migrate() {
   git push --all && git push --tags || die "git push failed"
   echo "Cleaning..."
   cd .. && rm -rf ${newRepoName}
-  echo "All done... Now cloning from new gitlab server..."
+  echo "All done... Now cloning to local from new lab server..."
   git clone ${newRepoUrl} ${newRepoName} || warn "Couldnt clone ${newRepoName}"
   echo "$(pwd)/${newRepoName} is ready"
 }
